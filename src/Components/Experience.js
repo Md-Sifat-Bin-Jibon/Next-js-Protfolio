@@ -1,124 +1,116 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 
-function Experience() {
-  // State to manage selected button and content
-  const [selectedExperience, setSelectedExperience] = useState("work");
+const experiences = [
+  {
+    company: "R3",
+    role: "Blockchain Developer",
+    location: "",
+    period: "September 2025 — Present",
+    url: "https://www.linkedin.com/company/r3cev-llc",
+    points: [
+      "Building distributed ledger solutions and smart contract workflows on Corda.",
+      "Designing secure transaction flows and integrations with enterprise systems.",
+      "Improving performance and reliability across blockchain services.",
+    ],
+  },
+  {
+    company: "DataSynthis",
+    role: "Chief Technology Officer (CTO)",
+    location: "",
+    period: "September 2025 — Present",
+    url: "https://www.linkedin.com/company/datasynthis",
+    points: [
+      "Setting technical vision and roadmap across data and platform initiatives.",
+      "Leading engineering teams and establishing coding standards and CI/CD.",
+      "Driving architecture decisions for scalability and reliability.",
+    ],
+  },
+  {
+    company: "BD Calling IT LTD",
+    role: "Junior Frontend Developer",
+    location: "",
+    period: "March 2025 — September 2025",
+    url: "https://www.linkedin.com/company/bdcallingitltd",
+    points: [
+      "Implemented responsive UI components with React/Next.js and Tailwind CSS.",
+      "Collaborated with backend teams to integrate REST APIs.",
+      "Improved Lighthouse scores through performance and accessibility fixes.",
+    ],
+  },
+  {
+    company: "Hyperlink InfoSystem",
+    role: "Frontend Engineer (Intern)",
+    location: "",
+    period: "August 2024 — March 2025",
+    url: "https://www.linkedin.com/company/hyperlinkinfosystem",
+    points: [
+      "Built UI features under mentorship, focusing on reusable components.",
+      "Learned best practices for state management and code reviews.",
+      "Contributed to bug fixes and UI polish across projects.",
+    ],
+  },
+];
 
-  // Content for different experiences
-  const workExperience = (
-    <div>
-      <h2 className="text-2xl font-semibold">
-        Forntend Intern @
-        <span className="text-teal-600">Hyperlink InfoSystem</span>
-      </h2>
-      <p className="text-xl ">JAN 2025 - MAY 2025</p>
-      <ul className="list-disc pl-5 mt-4">
-        <li>Working as an Frontend Intern, Web3js developer.</li>
-        <li>Working into one of the top team Fuji-14</li>
-        <li>Completed over 4+ Industry Projects</li>
-      </ul>
-    </div>
-  );
-
-  const educationExperience = (
-    <div>
-      <h2 className="text-2xl font-semibold">
-        Forntend Developer @<span className="text-teal-600">Whesper Dev</span>
-      </h2>
-      <p className="text-xl ">SEP 2024 - NOV 2024</p>
-      <ul className="list-disc pl-5 mt-4">
-        <li>
-          Working as an Frontend Developer, React js, Next js, Tailwnind CSS{" "}
-        </li>
-        <li>Worked with a 8 Person team </li>
-        <li>Completed over 2+ Industry Projects</li>
-      </ul>
-    </div>
-  );
-
-  const skillsExperience = (
-    <div>
-      <h2 className="text-2xl font-semibold">
-        Forntend Trainee @
-        <span className="text-teal-600">UIU Developers HUB</span>
-      </h2>
-      <p className="text-xl ">JUL 2024 - PRESENT</p>
-      <ul className="list-disc pl-5 mt-4">
-        <li>
-          Working as an Frontend Trainee, React js, Next js, Tailwnind CSS{" "}
-          ,Javascript
-        </li>
-        <li>Working with a 32 Person team, Teaching students </li>
-        <li>Completed over 6+ Industry Projects</li>
-      </ul>
-    </div>
-  );
-
-  // Decide what content to display based on the selected button
-  const renderContent = () => {
-    switch (selectedExperience) {
-      case "work":
-        return workExperience;
-      case "education":
-        return educationExperience;
-      case "skills":
-        return skillsExperience;
-      default:
-        return workExperience;
-    }
-  };
-
+const Experience = () => {
   return (
-    <div className="container mx-auto max-w-5xl p-6 text-[#ccd6f6] iceland mt-[120px]">
-      <div className="flex flex-col">
-        {/* Header Section */}
-        <div className="mb-8 flex flex-col md:flex-row items-center gap-6">
-          <h1 className="text-4xl font-semibold">/Experience</h1>
-          <hr className="border-t-2 border-teal-600 w-64 mt-2 md:mt-0" />
+    <section
+      id="experience"
+      className="py-20 bg-white min-h-screen flex flex-col items-center justify-center"
+    >
+      <div className="container mx-auto px-6 max-w-5xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-black">
+            Professional Experience
+          </h2>
+          <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+            Highlights from roles where I delivered impact across the stack.
+          </p>
         </div>
 
-        <div className="grid grid-cols-3 gap-4">
-          {/* Buttons Section (Left) */}
-          <div className="col-span-1 flex flex-col gap-6">
-            <button
-              onClick={() => setSelectedExperience("work")}
-              className={`px-6 py-2 text-white rounded-lg transition ${
-                selectedExperience === "work"
-                  ? "bg-teal-700"
-                  : "hover:bg-teal-700"
-              }`}
-            >
-              Hyperlink InfoSystem
-            </button>
-            <button
-              onClick={() => setSelectedExperience("education")}
-              className={`px-6 py-2 text-white rounded-lg transition ${
-                selectedExperience === "education"
-                  ? "bg-teal-700"
-                  : "hover:bg-teal-700"
-              }`}
-            >
-              Whesper Dev
-            </button>
-            <button
-              onClick={() => setSelectedExperience("skills")}
-              className={`px-6 py-2 text-white rounded-lg transition ${
-                selectedExperience === "skills"
-                  ? "bg-teal-700"
-                  : "hover:bg-teal-700"
-              }`}
-            >
-              UIU Developers HUB
-            </button>
-          </div>
-
-          {/* Content Section (Right) */}
-          <div className="col-span-2">{renderContent()}</div>
-        </div>
+        <ol className="relative border-s border-gray-200">
+          {experiences.map((exp, idx) => (
+            <li key={idx} className="ms-6 mb-10">
+              <span className="absolute -start-3 mt-1.5 h-6 w-6 rounded-full bg-green-600 ring-4 ring-white" />
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h3 className="text-xl font-semibold text-black">
+                      {exp.role}
+                    </h3>
+                    <p className="text-gray-700 flex items-center gap-3 flex-wrap">
+                      <span>
+                        {exp.company}
+                        {exp.location ? ` • ${exp.location}` : ""}
+                      </span>
+                      {exp.url ? (
+                        <a
+                          href={exp.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2.5 py-1 text-xs font-medium text-blue-700 border border-blue-200 hover:bg-blue-100"
+                          title="View company on LinkedIn"
+                        >
+                          LinkedIn <span aria-hidden>↗</span>
+                        </a>
+                      ) : null}
+                    </p>
+                  </div>
+                  <span className="text-sm text-gray-500 whitespace-nowrap">
+                    {exp.period}
+                  </span>
+                </div>
+                <ul className="mt-4 list-disc ps-5 space-y-2 text-gray-700">
+                  {exp.points.map((pt, i) => (
+                    <li key={i}>{pt}</li>
+                  ))}
+                </ul>
+              </div>
+            </li>
+          ))}
+        </ol>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default Experience;
