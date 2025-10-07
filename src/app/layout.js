@@ -9,96 +9,77 @@ const geist = Geist({ subsets: ["latin"] });
 const geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Md Sifat Bin Jibon | AI Engineer & Software Developer",
+  metadataBase: new URL("https://mdsifat.site"),
+  title: {
+    default: "Md Sifat Bin Jibon | Blockchain Developer & Software Engineer",
+    template: "%s | Md Sifat Bin Jibon",
+  },
   description:
-    "Md Sifat Bin Jibon is an AI Engineer and Software Developer with expertise in machine learning, deep learning, and building intelligent systems. Explore my portfolio to see innovative AI-driven projects, coding skills, and more.",
+    "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CTO at DataSynthis and Blockchain Developer at R3 — building Corda/DLT apps, tokenization and enterprise integrations. Explore projects, experience and contact details.",
+  applicationName: "Md Sifat Portfolio",
+  authors: [{ name: "Md Sifat Bin Jibon", url: "https://mdsifat.site" }],
   keywords: [
     "md sifat bin jibon",
     "Md Sifat",
     "Md Sifat Bin Jibon",
+    "Blockchain Developer Bangladesh",
+    "Blockchain developer in Bangladesh",
+    "best blockchain developer Bangladesh",
+    "Corda developer Bangladesh",
+    "DLT engineer Bangladesh",
+    "DataSynthis CTO",
+    "CTO DataSynthis",
+    "R3 Blockchain Developer",
     "Md Sifat Portfolio",
     "Md Sifat Projects",
-    "Md Sifat AI Engineer",
-    "Md Sifat Software Developer",
-    "Md Sifat AI Projects",
-    "Md Sifat Machine Learning",
-    "Md Sifat Deep Learning",
-    "Md Sifat AI Engineer Portfolio",
-    "Md Sifat Software Developer Portfolio",
-    "Md Sifat AI Engineer Projects",
-    "Md Sifat Software Developer Projects",
-    "Md Sifat AI Engineer Bangladesh",
-    "Md Sifat Software Developer Bangladesh",
-    "Md Sifat AI Engineer Dhaka",
-    "Md Sifat Software Developer Dhaka",
-    "Md Sifat AI Engineer in Bangladesh",
-    "Md Sifat Software Developer in Bangladesh",
-    "Md Sifat AI Engineer in Dhaka",
-    "Md Sifat Software Developer in Dhaka",
-    "Md Sifat AI Engineer Skills",
-    "Md Sifat Software Developer Skills",
-    "Md Sifat AI Engineer Experience",
-    "Md Sifat Software Developer Experience",
-    "Md Sifat AI Engineer Projects Bangladesh",
-    "Md Sifat Software Developer Projects Bangladesh",
-    "Md Sifat AI Engineer Projects Dhaka",
-    "Md Sifat Software Developer Projects Dhaka",
-    "Md Sifat AI Engineer Projects in Bangladesh",
-    "AI Engineer",
-    "Machine Learning Engineer",
-    "Deep Learning Engineer",
-    "Artificial Intelligence",
     "Software Developer",
-    "Python Developer",
-    "Data Scientist",
-    "AI Portfolio",
-    "AI Projects",
-    "Machine Learning Projects",
-    "Deep Learning Projects",
-    "Natural Language Processing",
-    "Computer Vision",
-    "TensorFlow",
-    "PyTorch",
-    "ML Engineer",
-    "AI Researcher",
-    "AI Solutions",
-    "AI Models",
-    "AI Algorithms",
-    "Full Stack AI Engineer",
-    "Data Science",
-    "AI Development",
-    "AI Innovations",
-    "AI Development Portfolio",
-    "AI Engineer Portfolio",
-    "ML Engineer Portfolio",
-    "Data Science Portfolio",
-    "AI Programming",
-    "AI Engineers in Bangladesh",
-    "AI Engineers in Dhaka",
+    "Frontend Engineer",
+    "React Next.js developer",
+    "Tokenization",
+    "Corda",
+    "Distributed Ledger",
     "Md Sifat Portfolio",
-    "AI Engineering in Bangladesh",
+    "Blockchain engineering in Bangladesh",
     "Software Development",
-    "Deep Learning Frameworks",
-    "Supervised Learning",
-    "Unsupervised Learning",
-    "Reinforcement Learning",
-    "AI-based Solutions",
-    "AI Projects Bangladesh",
     "Tech Solutions in Bangladesh",
-    "Data Science Engineering",
-    "Python AI Programming",
-    "AI Solutions Bangladesh",
-    "AI Innovation Bangladesh",
   ].join(", "),
-  authors: [{ name: "Md Sifat Bin Jibon" }],
+  alternates: {
+    canonical: "https://mdsifat.site",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      maxImagePreview: "large",
+      maxSnippet: -1,
+      maxVideoPreview: -1,
+    },
+  },
   openGraph: {
-    title: "Md Sifat Bin Jibon | AI Engineer & Software Developer",
+    title: "Md Sifat Bin Jibon | Blockchain Developer & Software Engineer",
     description:
       "Md Sifat Bin Jibon is an AI Engineer and Software Developer with a passion for building intelligent systems. Explore AI-driven projects, machine learning solutions, and more in my portfolio.",
     type: "website",
     locale: "en",
-    url: "https://mdsifat.site", // Your portfolio URL
-    image: "https://mdsifat.site/your-image.png", // Replace with your image URL
+    url: "https://mdsifat.site",
+    images: [
+      {
+        url: "/profpic.jpg",
+        width: 800,
+        height: 800,
+        alt: "Md Sifat Bin Jibon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Md Sifat Bin Jibon | Blockchain Developer & Software Engineer",
+    description:
+      "Portfolio of Md Sifat Bin Jibon – Blockchain Developer in Bangladesh, CTO at DataSynthis.",
+    creator: "@md_sifat",
+    images: ["/profpic.jpg"],
   },
 };
 
@@ -116,39 +97,22 @@ export default function RootLayout({ children }) {
         {/* ✅ Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {/* Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
-          rel="stylesheet"
-        />
+        {/* Removed external Google Fonts (using next/font instead for performance) */}
         {/* Theme Color */}
         <meta name="theme-color" content="#0D47A1" />
-        {/* Open Graph */}
-        <meta
-          property="og:image"
-          content="https://mdsifat.site/your-image.png"
-        />
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="twitter:image"
-          content="https://mdsifat.site/your-image.png"
-        />
+        {/* Robots */}
+        <meta name="robots" content="index,follow,max-image-preview:large" />
+        {/* Social images are configured via Next.js metadata above */}
+        {/* rel=me for identity linking */}
+        <link rel="me" href="https://www.linkedin.com/in/md-sifat-follow" />
+        <link rel="me" href="https://github.com/Md-Sifat-code" />
         {/* Apple Web App */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+        {/* JSON-LD: Person and WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -157,15 +121,40 @@ export default function RootLayout({ children }) {
               "@type": "Person",
               name: "Md Sifat Bin Jibon",
               url: "https://mdsifat.site",
-              logo: "https://mdsifat.site/your-image.png", // Replace with your logo/image URL
+              image: "https://mdsifat.site/profpic.jpg",
               description:
-                "Md Sifat Bin Jibon is an AI Engineer and Software Developer specializing in machine learning, deep learning, and building intelligent systems.",
+                "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CTO at DataSynthis and Blockchain Developer at R3, specialized in Corda, tokenization and DLT integrations.",
               sameAs: [
                 "https://www.linkedin.com/in/md-sifat-follow",
                 "https://github.com/Md-Sifat-code",
                 "https://fluvosoft.com", // Your company link
               ],
-              jobTitle: "AI Engineer & Software Developer",
+              jobTitle: "Blockchain Developer & Software Engineer",
+              worksFor: [
+                {
+                  "@type": "Organization",
+                  name: "DataSynthis",
+                  sameAs: "https://www.linkedin.com/company/datasynthis",
+                  employee: {
+                    "@type": "Person",
+                    name: "Md Sifat Bin Jibon",
+                  },
+                  employeeType: "CTO",
+                },
+                {
+                  "@type": "Organization",
+                  name: "R3",
+                  sameAs: "https://www.linkedin.com/company/r3cev-llc",
+                },
+              ],
+              knowsAbout: [
+                "Blockchain",
+                "Corda",
+                "Tokenization",
+                "Distributed Ledger Technology",
+                "Smart Contracts",
+                "Solana",
+              ],
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Dhaka",
@@ -175,7 +164,23 @@ export default function RootLayout({ children }) {
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "customer support",
-                email: "md.sifat@example.com", // Replace with your contact email
+                email: "codewithsifat4@gmail.com",
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Md Sifat Bin Jibon Portfolio",
+              url: "https://mdsifat.site",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://mdsifat.site/?q={search_term_string}",
+                "query-input": "required name=search_term_string",
               },
             }),
           }}

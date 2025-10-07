@@ -1,22 +1,13 @@
-import Aboutme from "@/Components/Aboutme";
-import Experience from "@/Components/Experience";
 import Hero from "@/Components/Hero";
-import Projects from "@/Components/Projects";
-import Image from "next/image";
+import TechStack from "@/Components/TechStack";
+import Experience from "@/Components/Experience";
 
 export default function Home() {
   return (
-    <div className="">
+    <main className="relative">
       <Hero />
-      <div>
-        <Aboutme />
-      </div>
-      <div>
-        <Experience />
-      </div>
-      <div>
-        <Projects />
-      </div>
-    </div>
+      <TechStack />
+      <Experience />
+    </main>
   );
 }
