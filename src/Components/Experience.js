@@ -63,7 +63,9 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-            Highlights from roles where I delivered impact across the stack.
+            As a <span className="font-semibold">Blockchain Developer in Bangladesh</span>, I've worked with leading organizations like{" "}
+            <span className="font-semibold">R3</span> and{" "}
+            <span className="font-semibold">DataSynthis</span>, delivering impact across the blockchain and software development stack.
           </p>
         </div>
 

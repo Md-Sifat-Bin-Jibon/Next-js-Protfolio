@@ -47,11 +47,12 @@ function Hero() {
             <div className="relative w-32 h-32">
               <Image
                 src="/profpic.jpg"
-                alt="Md Sifat Bin Jibon"
+                alt="Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis, Former UIU Developers HUB member"
                 fill
                 sizes="128px"
                 priority
                 className="object-cover rounded-full border-4 border-gray-200 shadow-lg"
+                title="Md Sifat Bin Jibon - Blockchain Developer in Bangladesh"
               />
             </div>
           </div>
@@ -91,15 +92,23 @@ function Hero() {
             }`}
           >
             <p className="text-lg text-gray-700 leading-relaxed">
-              I&apos;m a passionate blockchain developer and technology leader
-              specializing in distributed ledger technologies and enterprise
-              solutions. As a{" "}
-              <span className="font-bold text-blue-600">Blockchain</span>{" "}
-              Developer at R3, I build innovative Corda-based applications,
-              while as CTO at DataSynthis, I lead technical strategy and drive
-              digital transformation initiatives. I love working with
-              cutting-edge frameworks and creating scalable enterprise
-              solutions.
+              I&apos;m a passionate{" "}
+              <span className="font-bold text-blue-600">
+                Blockchain Developer in Bangladesh
+              </span>{" "}
+              and technology leader specializing in distributed ledger
+              technologies and enterprise solutions. As a{" "}
+              <span className="font-bold text-blue-600">Blockchain Developer</span>{" "}
+              at <span className="font-semibold">R3</span>, I build innovative
+              Corda-based applications, while as CTO at{" "}
+              <span className="font-semibold">DataSynthis</span>, I lead
+              technical strategy and drive digital transformation initiatives. As
+              a former member of{" "}
+              <span className="font-semibold">UIU Developers HUB</span> at{" "}
+              <span className="font-semibold">United International University (UIU)</span>
+              , I conducted React Orbit and Hackathon Preparation workshops. I
+              love working with cutting-edge frameworks and creating scalable
+              enterprise solutions.
             </p>
           </div>
 
