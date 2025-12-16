@@ -2,71 +2,19 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import blogPostsData from "@/data/blogPosts.json";
 
-// Sample blog posts data - you can replace this with actual data later
-const blogPosts = [
-  {
-    id: 1,
-    title: "Getting Started with Blockchain Development",
-    excerpt:
-      "Explore the fundamentals of blockchain technology and learn how to build your first decentralized application using modern tools and frameworks.",
-    category: "Blockchain",
-    date: "December 15, 2024",
-    readTime: "5 min read",
-    featured: true,
-    image: "/profpic.jpg",
-  },
-  {
-    id: 2,
-    title: "Building Scalable DApps with Corda",
-    excerpt:
-      "A comprehensive guide to developing enterprise-grade distributed ledger applications using R3 Corda platform.",
-    category: "Corda",
-    date: "December 10, 2024",
-    readTime: "8 min read",
-    featured: false,
-  },
-  {
-    id: 3,
-    title: "React Best Practices for 2024",
-    excerpt:
-      "Discover the latest React patterns, hooks, and optimization techniques to build faster and more maintainable applications.",
-    category: "Frontend",
-    date: "December 5, 2024",
-    readTime: "6 min read",
-    featured: false,
-  },
-  {
-    id: 4,
-    title: "Hackathon Preparation Guide",
-    excerpt:
-      "Learn strategies and tips from my experience conducting hackathon workshops at UIU Developers HUB.",
-    category: "Hackathon",
-    date: "November 28, 2024",
-    readTime: "7 min read",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Blockchain Developer Career Path",
-    excerpt:
-      "Insights into becoming a blockchain developer in Bangladesh and the skills needed to succeed in this field.",
-    category: "Career",
-    date: "November 20, 2024",
-    readTime: "10 min read",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Next.js Performance Optimization",
-    excerpt:
-      "Advanced techniques to optimize your Next.js applications for better performance and SEO.",
-    category: "Web Development",
-    date: "November 15, 2024",
-    readTime: "9 min read",
-    featured: false,
-  },
-];
+// Use posts from JSON file
+const blogPosts = blogPostsData.posts.map((post) => ({
+  id: post.id,
+  title: post.title,
+  excerpt: post.excerpt,
+  category: post.category,
+  date: post.date,
+  readTime: post.readTime,
+  featured: post.featured,
+  image: post.image,
+}));
 
 const categories = [
   "All",
@@ -86,7 +34,12 @@ export default function BlogPage() {
       ? blogPosts
       : blogPosts.filter((post) => post.category === selectedCategory);
 
-  const featuredPost = blogPosts.find((post) => post.featured);
+  // Get the most recent featured post for the featured section
+  const featuredPosts = blogPosts.filter((post) => post.featured);
+  const featuredPost = featuredPosts.sort((a, b) => {
+    // Sort by date descending (most recent first)
+    return new Date(b.date) - new Date(a.date);
+  })[0];
 
   return (
     <main className="min-h-screen bg-white text-black pt-20 pb-32">
@@ -197,7 +150,7 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredPosts
-            .filter((post) => !post.featured)
+            .filter((post) => post.id !== featuredPost?.id)
             .map((post) => (
               <article
               key={post.id}
@@ -277,7 +230,7 @@ export default function BlogPage() {
         </div>
 
         {/* Empty State */}
-        {filteredPosts.filter((post) => !post.featured).length === 0 && (
+        {filteredPosts.filter((post) => post.id !== featuredPost?.id).length === 0 && (
           <div className="text-center py-16">
             <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
               <svg
