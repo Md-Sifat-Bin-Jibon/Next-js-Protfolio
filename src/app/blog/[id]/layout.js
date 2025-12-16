@@ -1,42 +1,15 @@
 import { Metadata } from "next";
+import blogPostsData from "@/data/blogPosts.json";
 
-const blogPosts = {
-  1: {
-    id: 1,
-    title: "Getting Started with Blockchain Development",
-    description:
-      "Complete beginner's guide to blockchain development. Learn blockchain fundamentals, smart contracts, dApps, and build your first blockchain project. Written by Md Sifat Bin Jibon, Blockchain Developer at R3 and CTO at DataSynthis.",
-    category: "Blockchain",
-    date: "2024-12-15",
-    readTime: "15 min read",
-    author: "Md Sifat Bin Jibon",
-    keywords: [
-      "blockchain development",
-      "blockchain development guide",
-      "blockchain tutorial",
-      "blockchain developer",
-      "blockchain development for beginners",
-      "how to learn blockchain development",
-      "blockchain programming",
-      "smart contracts",
-      "ethereum development",
-      "solidity tutorial",
-      "dapp development",
-      "blockchain technology",
-      "blockchain explained",
-      "blockchain developer tutorial",
-      "blockchain development course",
-      "blockchain development roadmap",
-      "blockchain development tools",
-      "blockchain development environment",
-      "blockchain development skills",
-      "blockchain development career",
-    ],
-  },
-};
+// Convert array to object for easier lookup
+const blogPosts = {};
+blogPostsData.posts.forEach((post) => {
+  blogPosts[post.id] = post;
+});
 
 export async function generateMetadata({ params }) {
-  const postId = parseInt(params.id);
+  const resolvedParams = await params;
+  const postId = parseInt(resolvedParams.id);
   const post = blogPosts[postId];
 
   if (!post) {
@@ -48,13 +21,21 @@ export async function generateMetadata({ params }) {
   const url = `https://mdsifat.site/blog/${postId}`;
   const imageUrl = `https://mdsifat.site/profpic.jpg`;
 
+  const isHackathonPost = postId === 4;
+  const titleSuffix = isHackathonPost 
+    ? "Hackathon Preparation Guide | Md Sifat Bin Jibon"
+    : "Blockchain Development Guide | Md Sifat Bin Jibon";
+  const ogTitleSuffix = isHackathonPost
+    ? "Hackathon Preparation Guide"
+    : "Blockchain Development Guide";
+
   return {
-    title: `${post.title} | Blockchain Development Guide | Md Sifat Bin Jibon`,
+    title: `${post.title} | ${titleSuffix}`,
     description: post.description,
     keywords: post.keywords.join(", "),
     authors: [{ name: post.author, url: "https://mdsifat.site" }],
     openGraph: {
-      title: `${post.title} | Blockchain Development Guide`,
+      title: `${post.title} | ${ogTitleSuffix}`,
       description: post.description,
       url: url,
       siteName: "Md Sifat Bin Jibon - Blockchain Developer",
@@ -63,7 +44,7 @@ export async function generateMetadata({ params }) {
           url: imageUrl,
           width: 1200,
           height: 630,
-          alt: `${post.title} - Blockchain Development Guide by Md Sifat Bin Jibon`,
+          alt: `${post.title} by Md Sifat Bin Jibon`,
         },
       ],
       locale: "en_US",
@@ -75,7 +56,7 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${post.title} | Blockchain Development Guide`,
+      title: `${post.title} | ${ogTitleSuffix}`,
       description: post.description,
       creator: "@md_sifat",
       images: [imageUrl],
