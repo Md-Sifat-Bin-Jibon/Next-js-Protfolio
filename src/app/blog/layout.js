@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Blog | Blockchain Development Guides & Tutorials | Md Sifat Bin Jibon",
   description:
-    "Read comprehensive guides on blockchain development, smart contracts, dApp development, Corda, Ethereum, and blockchain tutorials. Written by Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis.",
+    "Read comprehensive guides on blockchain development, smart contracts, dApp development, Corda, Ethereum, and blockchain tutorials. Written by Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft.",
   keywords: [
     "blockchain development blog",
     "blockchain development guides",
@@ -74,7 +74,7 @@ export default function BlogLayout({ children }) {
             author: {
               "@type": "Person",
               name: "Md Sifat Bin Jibon",
-              jobTitle: "Blockchain Developer at R3 & CTO at DataSynthis",
+              jobTitle: "Mid level Blockchain Developer at R3 & CEO at FluvoSoft",
               url: "https://mdsifat.site",
             },
             publisher: {

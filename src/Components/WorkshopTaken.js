@@ -23,6 +23,16 @@ const workshops = [
     students: "45+",
     topic: "Hackathon Preparation & Strategy",
   },
+  {
+    title: "Interview Panel",
+    description: "Participated as a panel member in interview sessions",
+    organization: "UIU Developers HUB",
+    institution: "United International University",
+    image: "/Workshop/md_sifat_bin_jibon_interview_panel.png",
+    alt: "Md Sifat Bin Jibon - Blockchain Developer in Bangladesh - Interview Panel at UIU Developers HUB (UIUDH) at United International University (UIU)",
+    students: "Panel Member",
+    topic: "Interview & Recruitment",
+  },
 ];
 
 const WorkshopTaken = () => {
@@ -66,11 +76,11 @@ const WorkshopTaken = () => {
           >
             Workshops Taken
           </h2>
-          <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto" itemProp="description">
             Sharing knowledge and experience through educational workshops at{" "}
             <span className="font-semibold">UIU Developers HUB</span> (UIUDH) at{" "}
             <span className="font-semibold">United International University</span> (UIU),
-            including React Orbit and Hackathon Preparation workshops.
+            including React Orbit, Hackathon Preparation, and Interview Panel workshops. As a Blockchain Developer in Bangladesh, I've conducted workshops teaching frontend development, hackathon strategies, and recruitment processes.
           </p>
         </div>
 

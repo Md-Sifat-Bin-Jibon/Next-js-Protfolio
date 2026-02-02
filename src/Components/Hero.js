@@ -47,7 +47,7 @@ function Hero() {
             <div className="relative w-32 h-32">
               <Image
                 src="/profpic.jpg"
-                alt="Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis, Former UIU Developers HUB member"
+                alt="Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft, Former UIU Developers HUB member"
                 fill
                 sizes="128px"
                 priority
@@ -79,7 +79,7 @@ function Hero() {
             }`}
           >
             <div className="inline-block bg-gray-100 text-black px-4 py-2 rounded-lg text-lg font-medium">
-              Blockchain Developer at R3 and CTO at DataSynthis
+              Mid level Blockchain Developer at R3 and CEO at FluvoSoft
             </div>
           </div>
 
@@ -100,8 +100,8 @@ function Hero() {
               technologies and enterprise solutions. As a{" "}
               <span className="font-bold text-blue-600">Blockchain Developer</span>{" "}
               at <span className="font-semibold">R3</span>, I build innovative
-              Corda-based applications, while as CTO at{" "}
-              <span className="font-semibold">DataSynthis</span>, I lead
+              Corda-based applications,               while as CEO at{" "}
+              <span className="font-semibold">FluvoSoft</span>, I lead
               technical strategy and drive digital transformation initiatives. As
               a former member of{" "}
               <span className="font-semibold">UIU Developers HUB</span> at{" "}
@@ -153,7 +153,7 @@ function Hero() {
             }`}
           >
             <a
-              href="https://github.com/Md-Sifat-code"
+              href="https://github.com/Md-Sifat-Bin-Jibon"
               target="_blank"
               rel="noopener noreferrer"
               className="text-black hover:text-gray-600 transition-colors duration-300 p-2 hover:bg-gray-100 rounded-lg"
@@ -161,7 +161,7 @@ function Hero() {
               <FaGithub size={24} />
             </a>
             <a
-              href="https://www.linkedin.com/in/md-sifat-follow/"
+              href="https://www.linkedin.com/in/mdsifatbinjibon/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 transition-colors duration-300 p-2 hover:bg-blue-50 rounded-lg"

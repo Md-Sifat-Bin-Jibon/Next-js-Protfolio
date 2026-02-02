@@ -3,7 +3,7 @@ import React from "react";
 const experiences = [
   {
     company: "R3",
-    role: "Blockchain Developer",
+    role: "Mid level Blockchain Developer",
     location: "",
     period: "September 2025 — Present",
     url: "https://www.linkedin.com/company/r3cev-llc",
@@ -14,11 +14,11 @@ const experiences = [
     ],
   },
   {
-    company: "DataSynthis",
-    role: "Chief Technology Officer (CTO)",
+    company: "FluvoSoft",
+    role: "Chief Executive Officer (CEO)",
     location: "",
     period: "September 2025 — Present",
-    url: "https://www.linkedin.com/company/datasynthis",
+    url: "https://www.linkedin.com/company/fluvo-soft",
     points: [
       "Setting technical vision and roadmap across data and platform initiatives.",
       "Leading engineering teams and establishing coding standards and CI/CD.",
@@ -65,7 +65,7 @@ const Experience = () => {
           <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
             As a <span className="font-semibold">Blockchain Developer in Bangladesh</span>, I've worked with leading organizations like{" "}
             <span className="font-semibold">R3</span> and{" "}
-            <span className="font-semibold">DataSynthis</span>, delivering impact across the blockchain and software development stack.
+            <span className="font-semibold">FluvoSoft</span>, delivering impact across the blockchain and software development stack.
           </p>
         </div>
 

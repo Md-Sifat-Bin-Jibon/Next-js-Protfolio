@@ -15,7 +15,7 @@ export default function HackathonGuideContent() {
         </p>
         <p className="mb-4">
           I'm <strong className="text-black">Md Sifat Bin Jibon</strong>, a
-          Blockchain Developer at R3 and CTO at DataSynthis. Over the years,
+          Mid level Blockchain Developer at R3 and CEO at FluvoSoft. Over the years,
           I've participated in <strong className="text-black">11 national hackathons</strong>,{" "}
           <strong className="text-black">1 international competition</strong>, and achieved{" "}
           <strong className="text-black">3 back-to-back wins</strong>. I've led teams to

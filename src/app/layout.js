@@ -12,11 +12,11 @@ const geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata = {
   metadataBase: new URL("https://mdsifat.site"),
   title: {
-    default: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & DataSynthis",
+    default: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
     template: "%s | Md Sifat Bin Jibon - Blockchain Developer in Bangladesh",
   },
   description:
-    "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CTO at DataSynthis and Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
+    "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CEO at FluvoSoft and Mid level Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
   applicationName: "Md Sifat Portfolio",
   authors: [{ name: "Md Sifat Bin Jibon", url: "https://mdsifat.site" }],
   keywords: [
@@ -36,8 +36,8 @@ export const metadata = {
     "UIUDH",
     "uiu developers hub",
     "UIU Developers HUB",
-    "datasynthis",
-    "DataSynthis",
+    "fluvosoft",
+    "FluvoSoft",
     "uiu orbit",
     "UIU Orbit",
     "React Orbit",
@@ -47,8 +47,8 @@ export const metadata = {
     "best blockchain developer Bangladesh",
     "Corda developer Bangladesh",
     "DLT engineer Bangladesh",
-    "DataSynthis CTO",
-    "CTO DataSynthis",
+    "FluvoSoft CEO",
+    "CEO FluvoSoft",
     "R3 Blockchain Developer",
     "Md Sifat Portfolio",
     "Md Sifat Projects",
@@ -63,6 +63,14 @@ export const metadata = {
     "Tech Solutions in Bangladesh",
     "drmc",
     "DRMC",
+    "LinkedIn posts",
+    "LinkedIn contributions",
+    "startup strategy",
+    "blockchain startup Bangladesh",
+    "Interview Panel",
+    "workshop instructor",
+    "UIU workshop",
+    "educational workshops",
   ].join(", "),
   alternates: {
     canonical: "https://mdsifat.site",
@@ -79,9 +87,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & DataSynthis",
+    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
     description:
-      "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh working at R3 and CTO at DataSynthis. Former UIU Developers HUB member, conducted workshops at United International University (UIU). Expert in Corda, DLT, and blockchain solutions.",
+      "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh working at R3 and CEO at FluvoSoft. Former UIU Developers HUB member, conducted workshops at United International University (UIU). Expert in Corda, DLT, and blockchain solutions.",
     type: "website",
     locale: "en",
     url: "https://mdsifat.site",
@@ -91,15 +99,15 @@ export const metadata = {
         url: "/profpic.jpg",
         width: 800,
         height: 800,
-        alt: "Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis",
+        alt: "Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & DataSynthis",
+    title: "Md Sifat Bin Jibon | Blockchain Developer in Bangladesh | R3 & FluvoSoft",
     description:
-      "Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis. Former UIU Developers HUB member. Expert in Corda, DLT, and blockchain solutions.",
+      "Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft. Former UIU Developers HUB member. Expert in Corda, DLT, and blockchain solutions.",
     creator: "@md_sifat",
     images: ["/profpic.jpg"],
   },
@@ -126,8 +134,8 @@ export default function RootLayout({ children }) {
         <meta name="robots" content="index,follow,max-image-preview:large" />
         {/* Social images are configured via Next.js metadata above */}
         {/* rel=me for identity linking */}
-        <link rel="me" href="https://www.linkedin.com/in/md-sifat-follow" />
-        <link rel="me" href="https://github.com/Md-Sifat-code" />
+        <link rel="me" href="https://www.linkedin.com/in/mdsifatbinjibon/" />
+        <link rel="me" href="https://github.com/Md-Sifat-Bin-Jibon" />
         {/* Apple Web App */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
@@ -146,10 +154,10 @@ export default function RootLayout({ children }) {
               url: "https://mdsifat.site",
               image: "https://mdsifat.site/profpic.jpg",
               description:
-                "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CTO at DataSynthis and Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
+                "Md Sifat Bin Jibon is a Blockchain Developer in Bangladesh and Software Engineer. CEO at FluvoSoft and Mid level Blockchain Developer at R3. Former UIU Developers HUB member, conducted React Orbit and Hackathon Preparation workshops at United International University (UIU). Specialized in Corda, DLT, and blockchain solutions.",
               sameAs: [
-                "https://www.linkedin.com/in/md-sifat-follow",
-                "https://github.com/Md-Sifat-code",
+                "https://www.linkedin.com/in/mdsifatbinjibon/",
+                "https://github.com/Md-Sifat-Bin-Jibon",
               ],
               jobTitle: "Blockchain Developer & Software Engineer",
               worksFor: [
@@ -162,9 +170,9 @@ export default function RootLayout({ children }) {
                 },
                 {
                   "@type": "Organization",
-                  name: "DataSynthis",
-                  alternateName: "datasynthis",
-                  sameAs: "https://www.linkedin.com/company/datasynthis",
+                  name: "FluvoSoft",
+                  alternateName: "fluvosoft",
+                  sameAs: "https://www.linkedin.com/company/fluvo-soft",
                   employee: {
                     "@type": "Person",
                     name: "Md Sifat Bin Jibon",
@@ -254,7 +262,7 @@ export default function RootLayout({ children }) {
               alternateName: ["Md Sifat Portfolio", "md sifat portfolio"],
               url: "https://mdsifat.site",
               description:
-                "Portfolio of Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CTO at DataSynthis. Former UIU Developers HUB member.",
+                "Portfolio of Md Sifat Bin Jibon - Blockchain Developer in Bangladesh at R3 and CEO at FluvoSoft. Former UIU Developers HUB member.",
               potentialAction: {
                 "@type": "SearchAction",
                 target: "https://mdsifat.site/?q={search_term_string}",

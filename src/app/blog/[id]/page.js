@@ -68,8 +68,8 @@ export default function BlogPost() {
               jobTitle: post.authorRole,
               url: "https://mdsifat.site",
               sameAs: [
-                "https://www.linkedin.com/in/md-sifat-follow",
-                "https://github.com/Md-Sifat-code",
+                "https://www.linkedin.com/in/mdsifatbinjibon/",
+                "https://github.com/Md-Sifat-Bin-Jibon",
               ],
             },
             publisher: {
