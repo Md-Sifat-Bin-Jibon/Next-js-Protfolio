@@ -17,7 +17,7 @@ export default function BlogContent() {
           <strong className="text-black">
             Md Sifat Bin Jibon, a Blockchain Developer in Bangladesh
           </strong>
-          , currently working at R3 and serving as CTO at DataSynthis. With
+          , currently working at R3 and serving as CEO at FluvoSoft. With
           over a decade of experience in blockchain development, I've witnessed
           this technology evolve from Bitcoin's early days to today's
           sophisticated enterprise solutions. I remember my first encounter with
@@ -977,7 +977,7 @@ contract Voting {
           I encourage you to share your projects, ask questions in communities,
           and contribute to the ecosystem. Blockchain changed my career, taking
           me from a curious developer to working with enterprise solutions at R3
-          and leading technical teams at DataSynthis. The same opportunity
+          and leading technical teams at FluvoSoft. The same opportunity
           awaits you.
         </p>
         <p className="mb-6">

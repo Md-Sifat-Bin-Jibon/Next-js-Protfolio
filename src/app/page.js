@@ -4,6 +4,7 @@ import HackathonAchievements from "@/Components/HackathonAchievements";
 import WorkshopTaken from "@/Components/WorkshopTaken";
 import Experience from "@/Components/Experience";
 import LinkedInContributions from "@/Components/LinkedInContributions";
+import YouTubeSection from "@/Components/YouTubeSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <WorkshopTaken />
       <Experience />
       <LinkedInContributions />
+      <YouTubeSection />
       {/* SEO-optimized hidden content for search engines */}
       <div className="sr-only" aria-hidden="true">
         <h2>Md Sifat Bin Jibon - Blockchain Developer in Bangladesh</h2>
